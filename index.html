@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff5e92">
+    <title>Will You Go On A Date With Me? ❤️</title>
+    <meta name="description" content="A romantic little question for someone special. Will you go on a date with me?">
+
+    <!-- Google Fonts for the introduction screen -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ===== Animated romantic background ===== -->
+    <div class="background" aria-hidden="true">
+        <div class="hearts-layer" id="heartsLayer"></div>
+        <div class="glow glow-a"></div>
+        <div class="glow glow-b"></div>
+        <div class="glow glow-c"></div>
+    </div>
+
+    <div class="app-shell">
+        <main id="app" class="app" tabindex="-1">
+
+<!-- ============ SCREEN 0 : INTRODUCTION ============ -->
+            <section class="screen active" id="screen-intro" data-step="intro" aria-labelledby="intro-title">
+                <div class="intro-wrap">
+                    <div class="intro-card">
+                        <div class="intro-emoji" aria-hidden="true">❤️ ✨</div>
+                        <p class="intro-eyebrow">Before You Say Anything...</p>
+                        <p class="intro-text">
+                            Before you continue, I just want you to know one little thing. ❤️
+                        </p>
+                        <p class="intro-text">
+                            This isn't about anything inappropriate, uncomfortable, or anything you should ever feel pressured about.
+                        </p>
+                        <p class="intro-text">
+                            When I say <em>"date"</em>, I simply mean spending some good time together having something delicious to eat, talking about random things, laughing at silly things, enjoying the moment, and getting to know each other a little better.
+                        </p>
+                        <p class="intro-text">
+                            Maybe we discover a new favorite place, maybe we have the best conversation, or maybe we simply end up laughing about something completely stupid. 😄
+                        </p>
+                        <p class="intro-text">
+                            There is no hidden intention behind this. Just a simple, respectful, and genuine invitation to spend some quality time together.
+                        </p>
+                        <p class="intro-text">
+                            I want you to feel comfortable, respected, and completely yourself.
+                        </p>
+                        <p class="intro-text">
+                            And honestly... sometimes the nicest memories are made from the simplest plans. ❤️
+                        </p>
+                        <p class="intro-text intro-ask">
+                            So, if you're comfortable with that…<br>shall we see where this little plan takes us? 🌸
+                        </p>
+                        <p class="intro-hand">"No pressure. No expectations. Just a little time together, if you'd like. ❤️"</p>
+                        <p class="intro-foot">Made with a little courage, a lot of thought, and hopefully a tiny smile from you. 😊❤️</p>
+                        <div class="button-row">
+                            <button class="btn btn-primary btn-lg" data-action="continueIntro">Okay, Let's Continue <span aria-hidden="true">❤️</span></button>
+                        </div>
+                        <p class="intro-tiny">Ready for a tiny adventure? 🌸</p>
+                    </div>
+                </div>
+            </section>
+            <!-- ============ SCREEN 1 : INVITATION ============ -->
+            <section class="screen" id="screen-landing" data-step="landing" aria-labelledby="landing-title">
+                <div class="screen-content center">
+                    <div class="big-heart" aria-hidden="true">❤️</div>
+                    <p class="eyebrow" id="landingEyebrow">A little question for someone special...</p>
+                    <h1 class="main-title" id="landingTitle">Will You Go On A Date With Me?</h1>
+                    <p class="subtitle">I promise good food, good vibes, and hopefully lots of smiles. 😊</p>
+                    <div class="button-row">
+                        <button class="btn btn-primary btn-lg" data-action="yes">YES <span aria-hidden="true">❤️</span></button>
+                        <button class="btn btn-ghost btn-lg" data-action="no">NO <span aria-hidden="true">🙈</span></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ YES : YAY INTRO ============ -->
+            <section class="screen" id="screen-yay" data-step="yay" aria-labelledby="yay-title">
+                <div class="screen-content center">
+                    <div class="big-heart bounce" aria-hidden="true">❤️</div>
+                    <h1 class="main-title" id="yayTitle">Yay! ❤️</h1>
+                    <p class="subtitle">Let's plan our perfect date!</p>
+                    <button class="btn btn-primary btn-lg" data-action="startPlanning">Next <span aria-hidden="true">→</span></button>
+                </div>
+            </section>
+<!-- ============ NO FLOW ============ -->
+            <section class="screen" id="screen-no" data-step="no" aria-labelledby="no-title">
+                <div class="screen-content center">
+                    <h1 class="main-title">Aww... 🥺</h1>
+                    <p class="subtitle">Are you sure? I was already imagining our food order. 😭🍕</p>
+                    <div class="stack">
+                        <button class="btn btn-primary" data-action="no-maybe">Maybe... <span aria-hidden="true">❤️</span></button>
+                        <button class="btn btn-primary" data-action="no-think">Let Me Think <span aria-hidden="true">🤔</span></button>
+                        <button class="btn btn-ghost" data-action="no-final">No, I Really Don't Want To</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="screen" id="screen-no-think" data-step="no-think" aria-labelledby="nothink-title">
+                <div class="screen-content center">
+                    <div class="big-heart" aria-hidden="true">🤍</div>
+                    <h1 class="main-title" id="nothinkTitle">That's completely okay ❤️ Take your time.</h1>
+                    <button class="btn btn-primary" data-action="no-maybe">Maybe Later <span aria-hidden="true">❤️</span></button>
+                    <button class="btn btn-primary" data-action="yes">Okay, Let's Go On A Date <span aria-hidden="true">❤️</span></button>
+                </div>
+            </section>
+
+            <section class="screen" id="screen-no-final" data-step="no-final" aria-labelledby="nofinal-title">
+                <div class="screen-content center">
+                    <div class="big-heart" aria-hidden="true">🤍</div>
+                    <h1 class="main-title">That's completely okay ❤️</h1>
+                    <p class="subtitle">I respect your decision. No hard feelings. 😊</p>
+                    <button class="btn btn-ghost" data-action="closePage">Close <span aria-hidden="true">❤️</span></button>
+                </div>
+            </section>
+
+            <!-- ============ NO : MAYBE SUCCESS ============ -->
+            <section class="screen" id="screen-no-maybe" data-step="no-maybe" aria-labelledby="nomaybe-title">
+                <div class="screen-content center">
+                    <div class="big-heart bounce" aria-hidden="true">😄</div>
+                    <h1 class="main-title" id="nomaybeTitle">Yesss! Maybe is still a possibility!</h1>
+                    <p class="subtitle">Let's plan something amazing! ❤️</p>
+                    <button class="btn btn-primary btn-lg" data-action="maybe-plan">Okay, Let's Plan It <span aria-hidden="true">❤️</span></button>
+                </div>
+            </section>
+<!-- ============ PLANNING WRAPPER (with progress indicator) ============ -->
+            <div class="planning" id="planning" hidden>
+                <!-- Progress indicator -->
+                <nav class="progress" aria-label="Planning progress">
+                    <div class="progress-steps" id="progressSteps">
+                        <span class="pstep active" data-ptarget="screen-date"><span class="pf">📅</span><span class="pl">Date</span></span>
+                        <span class="pstep" data-ptarget="screen-food"><span class="pf">🍕</span><span class="pl">Food</span></span>
+                        <span class="pstep" data-ptarget="screen-location"><span class="pf">📍</span><span class="pl">Place</span></span>
+                        <span class="pstep" data-ptarget="screen-style"><span class="pf">✨</span><span class="pl">Style</span></span>
+                        <span class="pstep" data-ptarget="screen-message"><span class="pf">💌</span><span class="pl">Msg</span></span>
+                        <span class="pstep" data-ptarget="screen-confirm"><span class="pf">💝</span><span class="pl">Confirm</span></span>
+                    </div>
+                    <div class="progress-bar"><span id="progressFill"></span></div>
+                </nav>
+
+                <!-- ===== STEP : DATE & TIME ===== -->
+                <section class="screen" id="screen-date" data-step="date" aria-labelledby="date-title">
+                    <div class="screen-content">
+                        <h1 class="main-title" id="dateTitle">When are you free? 📅❤️</h1>
+                        <div class="field">
+                            <label for="dateInput">Choose a Date</label>
+                            <input type="date" id="dateInput">
+                        </div>
+                        <div class="field">
+                            <label for="timeInput">Choose a Time</label>
+                            <input type="time" id="timeInput">
+                        </div>
+                        <div class="button-row">
+                            <button class="btn btn-ghost" data-action="back">← Back</button>
+                            <button class="btn btn-primary" data-action="continue">Continue <span aria-hidden="true">❤️</span></button>
+                        </div>
+                        <div class="reset-row"><button class="btn btn-link" data-action="startOver">Start Over 🔄</button></div>
+                    </div>
+                </section>
+<!-- ===== STEP : FOOD ===== -->
+                <section class="screen" id="screen-food" data-step="food" aria-labelledby="food-title">
+                    <div class="screen-content">
+                        <h1 class="main-title" id="foodTitle">What are we eating? 😋❤️</h1>
+                        <p class="hint">Your happiness starts with good food!</p>
+                        <div class="card-grid" id="foodGrid"></div>
+                        <div class="field">
+                            <label for="otherFoodInput">Other</label>
+                            <input type="text" id="otherFoodInput" placeholder="Something else..." maxlength="80">
+                        </div>
+                        <div class="button-row">
+                            <button class="btn btn-ghost" data-action="back">← Back</button>
+                            <button class="btn btn-primary" data-action="continue">Continue <span aria-hidden="true">❤️</span></button>
+                        </div>
+                        <div class="reset-row"><button class="btn btn-link" data-action="startOver">Start Over 🔄</button></div>
+                    </div>
+                </section>
+
+                <!-- ===== STEP : LOCATION ===== -->
+                <section class="screen" id="screen-location" data-step="location" aria-labelledby="location-title">
+                    <div class="screen-content">
+                        <h1 class="main-title" id="locationTitle">Where should we go? 📍💕</h1>
+                        <p class="hint">You choose the place, I'll handle the vibes.</p>
+                        <div class="card-grid" id="locationGrid"></div>
+                        <div class="field">
+                            <label for="customLocationInput">Your own suggestion</label>
+                            <input type="text" id="customLocationInput" placeholder="Where would you love to go?" maxlength="80">
+                        </div>
+                        <div class="button-row">
+                            <button class="btn btn-ghost" data-action="back">← Back</button>
+                            <button class="btn btn-primary" data-action="continue">Continue <span aria-hidden="true">❤️</span></button>
+                        </div>
+                        <div class="reset-row"><button class="btn btn-link" data-action="startOver">Start Over 🔄</button></div>
+                    </div>
+                </section>
+
+                <!-- ===== STEP : DATE STYLE ===== -->
+                <section class="screen" id="screen-style" data-step="style" aria-labelledby="style-title">
+                    <div class="screen-content">
+                        <h1 class="main-title" id="styleTitle">What kind of date do you want? ✨</h1>
+                        <div class="card-grid" id="styleGrid"></div>
+                        <div class="button-row">
+                            <button class="btn btn-ghost" data-action="back">← Back</button>
+                            <button class="btn btn-primary" data-action="continue">Continue <span aria-hidden="true">❤️</span></button>
+                        </div>
+                        <div class="reset-row"><button class="btn btn-link" data-action="startOver">Start Over 🔄</button></div>
+                    </div>
+                </section>
+
+                <!-- ===== STEP : SPECIAL MESSAGE ===== -->
+                <section class="screen" id="screen-message" data-step="message" aria-labelledby="message-title">
+                    <div class="screen-content">
+                        <h1 class="main-title" id="messageTitle">Anything else you'd like? 💌</h1>
+                        <div class="field">
+                            <label for="messageInput">Special Message</label>
+                            <textarea id="messageInput" rows="4" maxlength="280"
+                                placeholder="Tell me anything that would make our date more special..."></textarea>
+                        </div>
+                        <p class="hint">Optional — share a food preference, a special request, or anything on your mind. 💕</p>
+                        <div class="button-row">
+                            <button class="btn btn-ghost" data-action="back">← Back</button>
+                            <button class="btn btn-primary" data-action="review">Review Our Date <span aria-hidden="true">❤️</span></button>
+                        </div>
+                        <div class="reset-row"><button class="btn btn-link" data-action="startOver">Start Over 🔄</button></div>
+                    </div>
+                </section>
+<!-- ===== STEP : CONFIRMATION ===== -->
+                <section class="screen" id="screen-confirm" data-step="confirm" aria-labelledby="confirm-title">
+                    <div class="screen-content">
+                        <h1 class="main-title" id="confirmTitle">Our Date Plan ❤️</h1>
+                        <div class="summary" id="summaryCard"></div>
+                        <p class="confirm-ask" id="confirmAsk">Does everything look good? ❤️</p>
+                        <div class="button-row">
+                            <button class="btn btn-primary" data-action="confirm">Confirm Date <span aria-hidden="true">❤️</span></button>
+                            <button class="btn btn-ghost" data-action="change">Change Something <span aria-hidden="true">✏️</span></button>
+                        </div>
+                        <button class="btn btn-link" data-action="startOver">Start Over</button>
+                    </div>
+                </section>
+            </div>
+
+                <!-- ===== FINAL SUCCESS (outside the planning wrapper) ===== -->
+                <section class="screen" id="screen-success" data-step="success" aria-labelledby="success-title">
+                    <div class="screen-content center">
+                        <div class="celebration">
+                            <div class="big-heart pop" aria-hidden="true">💖</div>
+                            <h1 class="main-title" id="successTitle">IT'S A DATE! ❤️🎉</h1>
+                            <p class="subtitle" id="successSubtitle">I can't wait to spend some time with you!</p>
+                        </div>
+                        <div class="summary" id="finalSummary"></div>
+                        <button class="btn btn-whatsapp btn-lg" data-action="whatsapp">
+                            <span class="wa-icon" aria-hidden="true">💬</span> SEND OUR DATE PLAN ON WHATSAPP <span aria-hidden="true">💚❤️</span>
+                        </button>
+                        <p class="hint">Send your choices directly to me 💌</p>
+                        <button class="btn btn-link" data-action="startOver">Start Over</button>
+                    </div>
+                </section>
+
+        </main>
+    </div>
+
+<!-- Background romantic music (starts after YES is tapped) -->
+    <audio id="backgroundMusic" loop preload="auto">
+        <source src="assets/music/until%20we%20meet.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music control button (top-right corner) -->
+    <button id="musicButton" class="music-btn" title="Toggle music" aria-label="Music control">🎵</button>
+
+    <!-- Toast for custom validation messages -->
+    <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+    <!-- Confetti canvas -->
+    <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+    <!-- Start Over confirmation modal -->
+    <div class="modal-overlay" id="startOverModal" hidden role="dialog" aria-modal="true" aria-labelledby="startOverModalTitle">
+        <div class="modal-box">
+            <div class="big-heart" aria-hidden="true">🤔</div>
+            <h2 class="modal-title" id="startOverModalTitle">Start Over?</h2>
+            <p class="modal-text">This will erase your current plan and take you back to the very beginning.</p>
+            <div class="button-row">
+                <button class="btn btn-ghost" data-action="cancelStartOver">Keep Planning <span aria-hidden="true">💕</span></button>
+                <button class="btn btn-primary" data-action="confirmStartOver">Yes, Start Over <span aria-hidden="true">🔄</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
